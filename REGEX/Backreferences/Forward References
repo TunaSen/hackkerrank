@@ -1,0 +1,4 @@
+Solution with Ruby
+Regex_Pattern = '^(tac)((tactic)|(tac))*$'
+
+print !!(gets =~ /#{Regex_Pattern}/)

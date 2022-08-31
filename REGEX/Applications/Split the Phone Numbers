@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+N=int(input())
+
+
+for  i in range(N):
+    line=input()
+    l=[]
+    if line.count(" ")==0:
+        l=line.split("-")
+        #print(l)
+    else:
+        l=line.split(" ")
+        #print(l)
+    print("CountryCode={},LocalAreaCode={},Number={}".format(l[0],l[1],l[2]))

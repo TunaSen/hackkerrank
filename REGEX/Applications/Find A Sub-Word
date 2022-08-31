@@ -1,0 +1,15 @@
+import re
+
+line=[]
+pattern=[]
+for i in range(int(input())):
+    line.append(input())
+for i in range(int(input())):
+    pattern.append(input())
+for k in pattern:
+    pattern=re.compile(r'\w+('+k+')\w+')
+    c=0
+    for i in line:
+        for j in pattern.findall(i):
+            c+=1
+    print(c)

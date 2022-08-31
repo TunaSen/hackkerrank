@@ -1,0 +1,16 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+import re
+
+pattern= r'<(\w+)'
+line_num=int(input())
+
+tags=set()
+for i in range (line_num):
+    line=input()
+    
+    a=re.findall(pattern,line)
+    for j in a:
+        tags.add(j.replace("/",""))
+        
+
+print(";".join(sorted(tags)))

@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import re
+pattern=r'^[Hh][Ii]\s[^Dd]'
+N=int(input())
+
+for i in range(N):
+    line=input()
+    if bool(re.match(pattern,line)):
+        print (line)

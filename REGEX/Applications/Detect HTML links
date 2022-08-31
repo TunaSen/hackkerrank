@@ -1,0 +1,14 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+#(?<=href=\").*(?=\"\>)
+#'(?<=((\w) href=\")).*\">.*(?=<\/\2)'
+#<a\shref=\"(.+?)\".*?>([^<]*?)</'
+import re
+#pattern=r'<a\shref=\"(.*?)\".*>(.*?)<\/a>'
+pattern=r'<a\shref=\"(.+?)\".*?>([^<]*?)<\/a>'
+n=int(input())
+s=""
+for i in range(n):
+   s=input()
+   A=re.findall(pattern,s)
+   for i in A:
+       print(",".join(i))

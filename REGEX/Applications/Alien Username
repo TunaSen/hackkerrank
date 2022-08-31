@@ -1,0 +1,15 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+#start with _ or . first char 0-9 then writes 0 or eng up or low letters at the finish optional _
+import re
+
+pattern=r'^[._][0-9]+[a-zA-Z]*[_]?$'
+N= int(input())
+
+
+for i in range(N):
+    line=input()
+    is_valid=bool(re.match(pattern,line))
+    if is_valid:
+        print("VALID")
+    else:     
+        print("INVALID")
